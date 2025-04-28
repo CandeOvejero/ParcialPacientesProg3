@@ -1,0 +1,38 @@
+﻿@model List<ParcialPacientesProg3.Models.Paciente>
+@{
+    ViewData["Title"] = "Pacientes registrados";
+}
+
+
+@if (Model != null && Model.Count > 0)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Obra Social</th>
+                <th>Edad</th>
+                <th>Síntoma</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var paciente in Model)
+            {
+                <tr>
+                    <td>@paciente.Nombre</td>
+                    <td>@paciente.ObraSocial</td>
+                    <td>@paciente.Edad</td>
+                    <td>@paciente.Sintomas</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h3 style="color:red">Todavia no registro ningun paciente!!</h3>
+}
+
+<div class="botones">
+    <a class="btn" href="/Pacientes/Crear">Registrar nuevo paciente</a>
+</div>

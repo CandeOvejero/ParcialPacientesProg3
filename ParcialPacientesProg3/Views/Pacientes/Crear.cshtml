@@ -1,0 +1,35 @@
+﻿@model ParcialPacientesProg3.Models.Paciente
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+<h2>Registrar Paciente</h2>
+
+<form asp-action="Crear" method="post">
+    <div>
+        <label>Nombre y apellido:</label>
+        <input asp-for="Nombre" />
+    </div>
+    <div>
+        <label>Obra Social:</label>
+        <select asp-for="ObraSocial">
+            <option value="">Seleccione</option>
+            <option>Pami</option>
+            <option>Osde</option>
+            <option>Apross</option>
+            <option>Otra</option>
+        </select>
+    </div>
+    <div>
+        <label>Edad:</label>
+        <input asp-for="Edad" type="number" min="0" />
+    </div>
+    <div>
+        <label>Sintoma:</label>
+        <input asp-for="Sintomas" />
+    </div>
+    <button type="submit">Guardar</button>
+</form>
+
+@if (ViewBag.Mensaje != null)
+{
+    <p style="color: green">@ViewBag.Mensaje</p>
+}
