@@ -1,12 +1,14 @@
-Un hospital necesita una pequeña aplicación web para registrar los pacientes que son atendidos. tu tarea es implementar las vistas necesarias para: registrar un paciente, ver el listado de todos los pacientes registrados
+## Descripción
+Esta aplicación web permite registrar pacientes atendidos en un hospital y visualizar un listado de los mismos.
 
-registros funcionales: se debe permitir registrar un paciente con los siguientes datos: 
-NOMBRE DE CAMPO | TIPO DE DATO    | VALIDACION
-nombre		      | campo de texto  | no vacio
-obra social	    | select	        | que sea osde, pami, apross u otro
-edad		        | numerico	      | que sea al menos 0
-síntomas 	      | campo de texto  | no vacio
+## Requisitos
+Los pacientes deben registrarse con los siguientes datos:
+- **Nombre** (campo de texto, obligatorio)
+- **Obra Social** (select, debe ser OSDE, PAMI, APROSS u otro)
+- **Edad** (numérico, mínimo 0)
+- **Síntomas** (campo de texto, obligatorio)
 
-se deben validar los datos
-luego de cargar un paciente, debe redirigir al listado
-en el listado de pacientes, se deben mostrar todos los datos en una lista ordenada
+## Funcionalidades
+- **Registro de Paciente**: Se valida cada campo antes de guardar los datos.
+- **Listado de Pacientes**: Muestra todos los pacientes registrados en una lista ordenada.
+- **Redirección**: Luego de registrar un paciente, el sistema redirige automáticamente al listado.
